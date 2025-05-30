@@ -1,4 +1,8 @@
 ---
+import "@fontsource/source-serif-4";
+
+import "../styles/global.css";
+
 import Head from "../components/Head.astro";
 ---
 
@@ -6,6 +10,15 @@ import Head from "../components/Head.astro";
 <html lang="en">
   <Head />
   <body>
+    <nav>
+      <a href="/">GabeH</a>
+    </nav>
+    <section>
+      <header>
+        <h1>I'm Gabriel Hernandez</h1>
+        <p>Experienced Software Developer</p>
+      </header>
+    </section>
     <slot />
   </body>
 </html>
@@ -16,5 +29,16 @@ import Head from "../components/Head.astro";
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+
+  nav {
+    a {
+      text-decoration: none;
+      color: var(--color-text-brand);
+      font-family: "Source Serif 4", serif;
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: -1.68px;
+    }
   }
 </style>
