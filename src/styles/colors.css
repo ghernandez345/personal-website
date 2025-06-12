@@ -1,6 +1,6 @@
-/* primary colours */
+/* primitive colours */
 :root {
-  /* nuturals */
+  /* neutrals */
   --color-grey-100: #d7dfe4;
 
   /* shades */
@@ -8,7 +8,7 @@
   --color-black: #000;
 
   /* brand */
-  --color-ember: #13c179;
+  --color-emerald: #13c179;
   --color-rose-red: #c1135b;
 }
 
@@ -17,12 +17,26 @@
   /* text colours */
   --color-text-primary: var(--color-white);
   --color-text-secondary: var(--color-grey-100);
-  --color-text-brand: var(--color-ember);
+  --color-text-brand: var(--color-rose-red);
 
   /* background colours */
   --color-background-primary: var(--color-black);
-  --color-background-secondary: var(--color-white);
-  --color-background-brand: var(--color-ember);
+  --color-background-brand: var(--color-rose-red);
+
+  /* border colours */
+  --color-border-primary: var(--color-black);
+}
+
+/* dark theme */
+[data-theme="dark"] {
+  /* text colours */
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-grey-100);
+  --color-text-brand: var(--color-emerald);
+
+  /* background colours */
+  --color-background-primary: var(--color-black);
+  --color-background-brand: var(--color-emerald);
 
   /* border colours */
   --color-border-primary: var(--color-white);

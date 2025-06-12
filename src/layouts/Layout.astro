@@ -1,6 +1,4 @@
 ---
-import "@fontsource/source-serif-4";
-
 import "../styles/global.css";
 
 import Head from "../components/Head.astro";
@@ -11,12 +9,13 @@ import Head from "../components/Head.astro";
   <Head />
   <body>
     <nav>
-      <a href="/">GabeH</a>
+      <a href="/">MySite</a>
     </nav>
     <section>
       <header>
         <h1>I'm Gabriel Hernandez</h1>
         <p>Experienced Software Developer</p>
+        <p>Based in London</p>
       </header>
     </section>
     <slot />
@@ -33,12 +32,35 @@ import Head from "../components/Head.astro";
 
   nav {
     a {
-      text-decoration: none;
-      color: var(--color-text-brand);
-      font-family: "Source Serif 4", serif;
+      color: var(--text-secondary, #d7dfe4);
+      text-edge: cap;
+      font-family: var(--font-family-source-serif-4);
       font-size: 42px;
+      font-style: normal;
       font-weight: 600;
+      line-height: 100%; /* 42px */
       letter-spacing: -1.68px;
     }
+  }
+
+  h1 {
+    font-family: var(--font-family-outfit);
+    font-size: var(--font-size-120);
+    font-style: normal;
+    font-weight: var(--font-weight-bold);
+    line-height: 120%; /* 144px */
+    letter-spacing: var(--font-letter-spacing-0);
+  }
+
+  p {
+    color: var(--text-secondary, #d7dfe4);
+
+    /* body/m */
+    font-family: var(--font-family-public-sans);
+    font-size: var(--font-size-24);
+    font-style: normal;
+    font-weight: var(--font-weight-regular);
+    line-height: 140%;
+    letter-spacing: var(--font-letter-spacing-03);
   }
 </style>
