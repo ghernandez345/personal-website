@@ -1,13 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout>
-  <section class="content-container hero">
-    <h1>I'm Gabriel Hernandez</h1>
-    <p>Experienced Software Developer</p>
-    <p>Based in London</p>
-  </section>
+  <Hero />
   <section class="content-container">
     <!-- <img
       src="/img/me.jpg"
@@ -38,18 +35,9 @@ import Layout from "../layouts/Layout.astro";
       <li>Node</li>
     </ul>
   </section>
-  <footer>
-    <a href="mailto:ghernandez345@gmail.com">Contact Me</a>
-    <p>© 2025 Gabriel Hernandez</p>
-  </footer>
 </Layout>
 
 <style>
-  .content-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
   .hero {
     h1 {
       font-family: var(--font-family-outfit);
@@ -61,7 +49,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   p {
-    color: var(--text-secondary, #d7dfe4);
+    color: var(--color-text-secondary, #d7dfe4);
 
     /* body/m */
     font-family: var(--font-family-public-sans);

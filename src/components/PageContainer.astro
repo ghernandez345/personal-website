@@ -2,43 +2,39 @@
 
 ---
 
-<div class="container">
+<div class="page-container">
   <slot />
 </div>
 
 <style>
-  .container {
+  .page-container {
     max-width: var(--breakpoint-xs);
     margin: 0 auto;
-  }
+    padding: 0 var(--spacing-h);
 
-  @media screen and (min-width: var(--breakpoint-s)) {
-    .container {
+    @media screen and (min-width: 480px) {
       max-width: var(--breakpoint-s);
+      padding: 0 var(--spacing-xh);
     }
-  }
 
-  @media screen and (min-width: var(--breakpoint-m)) {
-    .container {
+    @media screen and (min-width: 768px) {
       max-width: var(--breakpoint-m);
+      padding: 0 var(--spacing-xh);
     }
-  }
 
-  @media screen and (min-width: var(--breakpoint-l)) {
-    .container {
+    @media screen and (min-width: 1024px) {
       max-width: var(--breakpoint-l);
+      padding: 0 var(--spacing-xh);
     }
-  }
 
-  @media screen and (min-width: var(--breakpoint-xl)) {
-    .container {
+    @media screen and (min-width: 1280px) {
       max-width: var(--breakpoint-xl);
+      padding: 0 var(--spacing-xh);
     }
-  }
 
-  @media screen and (min-width: var(--breakpoint-xxl)) {
-    .container {
+    @media screen and (min-width: 1440px) {
       max-width: var(--breakpoint-xxl);
+      padding: 0 var(--spacing-xh);
     }
   }
 </style>
