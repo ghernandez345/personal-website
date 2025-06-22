@@ -1,0 +1,44 @@
+---
+
+---
+
+<div class="container">
+  <slot />
+</div>
+
+<style>
+  .container {
+    max-width: var(--breakpoint-xs);
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: var(--breakpoint-s)) {
+    .container {
+      max-width: var(--breakpoint-s);
+    }
+  }
+
+  @media screen and (min-width: var(--breakpoint-m)) {
+    .container {
+      max-width: var(--breakpoint-m);
+    }
+  }
+
+  @media screen and (min-width: var(--breakpoint-l)) {
+    .container {
+      max-width: var(--breakpoint-l);
+    }
+  }
+
+  @media screen and (min-width: var(--breakpoint-xl)) {
+    .container {
+      max-width: var(--breakpoint-xl);
+    }
+  }
+
+  @media screen and (min-width: var(--breakpoint-xxl)) {
+    .container {
+      max-width: var(--breakpoint-xxl);
+    }
+  }
+</style>

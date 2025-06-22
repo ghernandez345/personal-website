@@ -2,25 +2,36 @@
 import "../styles/global.css";
 
 import Head from "../components/Head.astro";
+import PageContainer from "../components/PageContainer.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <Head />
   <body>
-    <nav>
-      <a href="/">MySite</a>
-    </nav>
-    <section>
+    <PageContainer>
       <header>
-        <h1>I'm Gabriel Hernandez</h1>
-        <p>Experienced Software Developer</p>
-        <p>Based in London</p>
+        <nav>
+          <a href="/">MySite</a>
+        </nav>
       </header>
-    </section>
-    <slot />
+      <slot />
+    </PageContainer>
   </body>
 </html>
+
+<!-- reset and global styles -->
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>
 
 <style>
   html,
@@ -30,37 +41,23 @@ import Head from "../components/Head.astro";
     height: 100%;
   }
 
+  body {
+    padding: 0 var(--spacing-h);
+    background-color: var(--color-background-primary);
+  }
+
+  header {
+    padding: var(--spacing-xl) 0;
+  }
+
   nav {
     a {
-      color: var(--text-secondary, #d7dfe4);
-      text-edge: cap;
+      color: var(--color-text-primary);
       font-family: var(--font-family-source-serif-4);
       font-size: 42px;
       font-style: normal;
-      font-weight: 600;
-      line-height: 100%; /* 42px */
+      line-height: 100%;
       letter-spacing: -1.68px;
     }
-  }
-
-  h1 {
-    font-family: var(--font-family-outfit);
-    font-size: var(--font-size-120);
-    font-style: normal;
-    font-weight: var(--font-weight-bold);
-    line-height: 120%; /* 144px */
-    letter-spacing: var(--font-letter-spacing-0);
-  }
-
-  p {
-    color: var(--text-secondary, #d7dfe4);
-
-    /* body/m */
-    font-family: var(--font-family-public-sans);
-    font-size: var(--font-size-24);
-    font-style: normal;
-    font-weight: var(--font-weight-regular);
-    line-height: 140%;
-    letter-spacing: var(--font-letter-spacing-03);
   }
 </style>
