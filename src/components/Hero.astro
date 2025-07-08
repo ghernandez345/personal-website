@@ -2,13 +2,21 @@
 import SectionContainer from "./SectionContainer.astro";
 ---
 
-<SectionContainer>
+<SectionContainer class="hero-container">
   <h1>I'm Gabriel Hernandez</h1>
-  <p>Experienced Software Developer</p>
-  <p>Based in London</p>
+  <p class="experienced-developer">Experienced Software Developer</p>
+  <p class="location">Based in London</p>
 </SectionContainer>
 
 <style>
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xh) 0px;
+  }
+
   h1 {
     font-family: var(--font-family-outfit);
     font-size: var(--font-size-48);
@@ -18,14 +26,23 @@ import SectionContainer from "./SectionContainer.astro";
   }
 
   p {
-    color: var(--color-text-secondary, #d7dfe4);
+    color: var(--color-text-primary);
+    line-height: 120%;
+    letter-spacing: var(--font-letter-spacing-03);
+  }
 
-    /* body/m */
+  .experienced-developer {
+    font-family: var(--font-family-outfit);
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--font-letter-spacing-03);
+  }
+
+  .location {
     font-family: var(--font-family-public-sans);
-    font-size: var(--font-size-24);
-    font-style: normal;
+    font-size: var(--font-size-20);
     font-weight: var(--font-weight-regular);
-    line-height: 140%;
+    line-height: 120%;
     letter-spacing: var(--font-letter-spacing-03);
   }
 </style>

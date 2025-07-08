@@ -1,4 +1,12 @@
-<section class="section-container">
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<section class:list={["section-container", className]} {...rest}>
   <slot />
 </section>
 
