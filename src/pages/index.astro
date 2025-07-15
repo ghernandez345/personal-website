@@ -5,31 +5,28 @@ import About from "../components/About.astro";
 ---
 
 <Layout>
-  <Hero />
-  <About />
-  <section class="content-container">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>JavaScript & Typescript</li>
-      <li>React</li>
-      <li>React Native</li>
-      <li>Golang</li>
-      <li>Node</li>
-    </ul>
-  </section>
+  <div class="main-content">
+    <Hero />
+    <About />
+    <section class="content-container">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>JavaScript & Typescript</li>
+        <li>React</li>
+        <li>React Native</li>
+        <li>Golang</li>
+        <li>Node</li>
+      </ul>
+    </section>
+  </div>
 </Layout>
 
 <style>
-  .hero {
-    h1 {
-      font-family: var(--font-family-outfit);
-      font-size: var(--font-size-48);
-      font-weight: var(--font-weight-bold);
-      line-height: 120%;
-      letter-spacing: var(--font-letter-spacing-0);
-    }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xh);
   }
-
   p {
     color: var(--color-text-secondary, #d7dfe4);
 

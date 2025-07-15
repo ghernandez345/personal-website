@@ -2,7 +2,7 @@
 import SectionContainer from "./SectionContainer.astro";
 ---
 
-<SectionContainer>
+<SectionContainer class="about-container">
   <img
     src="/img/me.jpg"
     srcset="/img/me.jpg 1x, /img/me@2x.jpg 2x"
@@ -25,7 +25,23 @@ import SectionContainer from "./SectionContainer.astro";
 </SectionContainer>
 
 <style>
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl, 24px);
+  }
+
   img {
     width: 100%;
+    border-radius: var(--border-radius-l);
+  }
+
+  h2 {
+    font-family: var(--font-family-outfit);
+    font-size: var(--font-size-48);
+    font-style: normal;
+    font-weight: var(--font-weight-semi-bold);
+    line-height: 140%; /* 67.2px */
+    letter-spacing: var(--font-letter-spacing-07);
   }
 </style>
