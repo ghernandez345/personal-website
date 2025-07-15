@@ -1,0 +1,51 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+---
+
+<SectionContainer class="technical-skills-container">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li>JavaScript & Typescript</li>
+    <li>React</li>
+    <li>React Native</li>
+    <li>Golang</li>
+    <li>Node</li>
+  </ul>
+</SectionContainer>
+
+<style>
+  .technical-skills-container {
+    display: flex;
+    padding: var(--spacing-xl) 0px;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  /* heading/s */
+  h2 {
+    font-family: var(--font-family-outfit);
+    font-size: var(--font-size-32);
+    font-style: normal;
+    font-weight: var(--font-weight-semi-bold);
+    line-height: 140%; /* 67.2px */
+    letter-spacing: var(--font-letter-spacing-07);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l, 20px);
+  }
+
+  li {
+    color: var(--color-text-secondary, #d7dfe4);
+
+    /* body/s */
+    font-family: var(--font-family-public-sans);
+    font-size: var(--font-size-20);
+    font-style: normal;
+    font-weight: var(--font-weight-regular);
+    line-height: 120%; /* 24px */
+    letter-spacing: var(--font-letter-spacing-03);
+  }
+</style>

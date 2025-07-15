@@ -26,3 +26,7 @@ ol {
 html:focus-within {
   scroll-behavior: smooth;
 }
+
+a {
+  text-decoration: none;
+}

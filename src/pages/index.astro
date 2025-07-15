@@ -2,22 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
+import TechnicalSkills from "../components/TechnicalSkills.astro";
 ---
 
 <Layout>
   <div class="main-content">
     <Hero />
     <About />
-    <section class="content-container">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>JavaScript & Typescript</li>
-        <li>React</li>
-        <li>React Native</li>
-        <li>Golang</li>
-        <li>Node</li>
-      </ul>
-    </section>
+    <TechnicalSkills />
   </div>
 </Layout>
 
@@ -27,6 +19,7 @@ import About from "../components/About.astro";
     flex-direction: column;
     gap: var(--spacing-xh);
   }
+
   p {
     color: var(--color-text-secondary, #d7dfe4);
 
