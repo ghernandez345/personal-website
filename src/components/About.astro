@@ -1,12 +1,15 @@
 ---
+import { Image } from "astro:assets";
 import SectionContainer from "./SectionContainer.astro";
+import myImage from "../assets/img/me.jpg";
 ---
 
 <SectionContainer class="about-container">
-  <img
-    src="/img/me.jpg"
-    srcset="/img/me.jpg 1x, /img/me@2x.jpg 2x"
-    alt="Picture of Gabriel Hernandez wearing a nice green shirt and smiling friendly"
+  <Image
+    src={myImage}
+    layout="fixed"
+    priority
+    alt="Gabriel Hernandez wearing a nice green shirt and smiling friendly"
   />
   <h2>About Me</h2>
   <p>
@@ -32,7 +35,6 @@ import SectionContainer from "./SectionContainer.astro";
   }
 
   img {
-    width: 100%;
     border-radius: var(--border-radius-l);
   }
 

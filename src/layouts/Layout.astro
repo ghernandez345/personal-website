@@ -4,6 +4,17 @@ import "../styles/global.css";
 import Head from "../components/Head.astro";
 import PageContainer from "../components/PageContainer.astro";
 import Footer from "../components/Footer.astro";
+
+const theme =
+  typeof window !== "undefined"
+    ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light"
+    : "light";
+
+console.log("Theme:", theme);
+
+Astro.props.htmlAttributes = { "data-theme": theme };
 ---
 
 <!doctype html>
