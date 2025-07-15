@@ -7,7 +7,6 @@ import myImage from "../assets/img/me.jpg";
 <SectionContainer class="about-container">
   <Image
     src={myImage}
-    layout="fixed"
     priority
     alt="Gabriel Hernandez wearing a nice green shirt and smiling friendly"
   />
@@ -35,6 +34,8 @@ import myImage from "../assets/img/me.jpg";
   }
 
   img {
+    width: 100%;
+    height: 100%;
     border-radius: var(--border-radius-l);
   }
 
