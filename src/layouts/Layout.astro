@@ -3,6 +3,7 @@ import "../styles/global.css";
 
 import Head from "../components/Head.astro";
 import PageContainer from "../components/PageContainer.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -16,10 +17,7 @@ import PageContainer from "../components/PageContainer.astro";
         </nav>
       </header>
       <slot />
-      <footer>
-        <a href="mailto:ghernandez345@gmail.com">Contact Me</a>
-        <p>© 2025 Gabriel Hernandez</p>
-      </footer>
+      <Footer />
     </PageContainer>
   </body>
 </html>
