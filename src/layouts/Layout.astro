@@ -13,11 +13,20 @@ const theme =
     : "light";
 
 console.log("Theme:", theme);
-
-Astro.props.htmlAttributes = { "data-theme": theme };
 ---
 
-<!doctype html>
+<script>
+  const theme =
+    typeof window !== "undefined"
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+      : "light";
+
+  console.log("Theme:", theme);
+  document.documentElement.setAttribute("data-theme", theme);
+</script>
+
 <html lang="en">
   <Head />
   <body>
