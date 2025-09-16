@@ -10,7 +10,7 @@
 <style>
   footer {
     display: flex;
-    padding: var(--spacing-xh) 0px;
+    padding: var(--spacing-xxh) 0px;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-xxl);
@@ -47,5 +47,14 @@
     line-height: 120%; /* 24px */
     letter-spacing: var(--font-letter-spacing-03);
     align-self: center;
+  }
+
+  @media (min-width: 768px) {
+    footer {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: auto;
+    }
   }
 </style>
