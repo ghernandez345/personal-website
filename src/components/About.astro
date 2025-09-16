@@ -76,4 +76,21 @@ import myImage from "../assets/img/me.jpg";
     line-height: 140%; /* 44.8px */
     letter-spacing: var(--font-letter-spacing-02);
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    .about-container {
+      flex-direction: row-reverse;
+      padding: var(--spacing-xh) 0;
+    } 
+  }
+  
+  @media (min-width: 1028px) {
+    .about-container {
+      padding: var(--spacing-xxh) 0;
+    }
+  }
 </style>
