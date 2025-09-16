@@ -19,10 +19,10 @@ import myImage from "../assets/img/me.jpg";
     </p>
     <ul>
       <li>
-        <a href="https://www.linkedin.com/in/gabriel-hernandez-gh">Linkedin</a>
+        <a href="https://www.linkedin.com/in/gabriel-hernandez-gh" target="_blank">Linkedin</a>
       </li>
       <li>
-        <a href="https://www.github.com/ghernandez345">Github</a>
+        <a href="https://www.github.com/ghernandez345" target="_blank">Github</a>
       </li>
     </ul>
   </div>
@@ -36,9 +36,16 @@ import myImage from "../assets/img/me.jpg";
   }
 
   img {
+    max-width: 256px;
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius-l);
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
   }
 
   h2 {
@@ -81,16 +88,36 @@ import myImage from "../assets/img/me.jpg";
     text-decoration: underline;
   }
 
+  @media (min-width: 480px) {
+    img {
+      max-width: 400px;
+    }
+  }
+
   @media (min-width: 768px) {
     .about-container {
       flex-direction: row-reverse;
       padding: var(--spacing-xh) 0;
     } 
+
+    img {
+      max-width: 289px;
+    }
   }
   
-  @media (min-width: 1028px) {
+  @media (min-width: 1024px) {
+    img {
+      max-width: 492px;
+    }
+  }
+
+  @media (min-width: 1280px) {
     .about-container {
       padding: var(--spacing-xxh) 0;
+    }
+
+    img {
+      max-width: 513px;
     }
   }
 </style>
