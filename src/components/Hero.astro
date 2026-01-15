@@ -5,7 +5,6 @@ import SectionContainer from "./SectionContainer.astro";
 <SectionContainer class="hero-container">
   <h1>I'm Gabriel Hernandez</h1>
   <p class="experienced-developer">Experienced Software Developer</p>
-  <p class="location">Based in London</p>
 </SectionContainer>
 
 <style>
@@ -38,13 +37,6 @@ import SectionContainer from "./SectionContainer.astro";
     font-weight: var(--font-weight-semi-bold);
   }
 
-  .location {
-    color: var(--color-text-secondary);
-    font-family: var(--font-family-public-sans);
-    font-size: var(--font-size-20);
-    font-weight: var(--font-weight-regular);
-  }
-
   @media (min-width: 480px) {
     h1 {
       font-size: var(--font-size-64);
@@ -62,10 +54,6 @@ import SectionContainer from "./SectionContainer.astro";
 
     .experienced-developer {
       font-size: var(--font-size-64);
-    }
-
-    .location {
-      font-size: var(--font-size-24);
     }
   }
 
